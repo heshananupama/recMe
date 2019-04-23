@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>About</title>
+
+		<title>recomMend</title>
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,9 +32,9 @@
 					<nav class="main-navigation">
 						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-							<li class="menu-item"><a href="#">Documentation</a></li>
-							<li class="menu-item"><a href="#">About</a></li>
+							<li class="menu-item "><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="documentation.html">Documentation</a></li>
+							<li class="menu-item current-menu-item"><a href="#">About</a></li>
 						</ul> <!-- .menu -->
 					</nav> <!-- .main-navigation -->
 					<div class="mobile-menu"></div>
@@ -47,21 +47,27 @@
 						<div class="row">
 							<div class="col-md-9">
 								<div class="content">
-									<h2 style="color: white">About recomMEnd</h2>
+									<h2 style="color: white">About</h2>
 									<!--<figure class="featured-image">-->
 										<!--<img src="dummy/post-image.jpg" alt="post image">-->
 									<!--</figure>-->
 									<p style="color: white ;text-align: justify; text-justify: inter-word">This was a project created on the requirment of Informational Retrieval & Social Web module by Professor <a href="https://www.wpi.edu/people/faculty/kmlee">Kyumin Lee</a> in Spring 2019 at Worcester Polytechnic Institute</p>
-									<h2 style="color: white">Introduction to the project</h2>
+									<h2 style="color: white">Why ReccomMend?</h2>
 
-									<p style="color: white; text-align: justify; text-justify: inter-word"> People often get worn out with the same mainstream/radio music that they listen on daily basis.
-										They want to explore more genres and more diverse artists. Plus there is a lack of good recommendation systems specifically designed
-										for music recommendation and tFhere are millions of songs and artists to explore.  Good recommendations allow people to discover new songs, artists and potentially genres that they enjoy.
-										A useful tool for generating new songs to listen to, in a user friendly way is imperative.<br><br>
-										We tried to address this problem by creating a good recommendation system for music. Our tool is to make a system that recommends music by taking a number of parameters
-										like genre of song, the artist, year of release and length of a song in to account. Basically, user can input the criterias
-										that he is mostly attached to and with a quick search, our system will recommend him some number of songs,
-										artists and albums that he may find interesting in the ranked order.
+									<p style="color: white; text-align: justify; text-justify: inter-word"> People often get worn out with the same mainstream/radio music
+										that they listen on daily basis. They want to explore more genres and more diverse artists.
+										Plus there is a lack of good recommendation systems specifically designed for music recommendation
+										and there are millions of songs and artists to explore. Good recommendations allow people to discover
+										new songs, artists and potentially genres that they enjoy. A useful tool for generating new songs to listen
+										to, in a user friendly way is imperative. <br><br>
+
+										Music taste is varied and diverse, someone who likes on artist in a genre does not necessarily
+										enjoy other music from that genre.  Our goal was to create a system that would provide fast and
+										direct recommendations for users that want more varied responses.  The system is takes an input
+										of three artists that the user enjoys and computes a recommendation of up to nine albums that the
+										user may also like.  The recommendation computes a KNN model using cosine similarity on the
+										dataset <a href="https://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-360K.html ">Last.FM 360K </a> and determining
+										the K nearest neighbors to a given queries.  The recommendation system then queries the Last.FM api to return the top albums of those recommended artists.  The system returns the recommendations in ranked order.
 									</p>
 
 								</div>
@@ -114,7 +120,7 @@
 						<a href="#"><i class="fa fa-pinterest"></i></a>
 					</div> <!-- .social-links -->
 					
-					<p class="copy">Copyright 2018. Designed by recomMEnd. All right reserved</p>
+					<p class="copy">Copyright 2019. Designed by recomMEnd. All right reserved</p>
 				</div>
 			</footer> <!-- .site-footer -->
 
