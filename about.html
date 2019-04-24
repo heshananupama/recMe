@@ -51,7 +51,7 @@
 									<!--<figure class="featured-image">-->
 										<!--<img src="dummy/post-image.jpg" alt="post image">-->
 									<!--</figure>-->
-									<p style="color: white ;text-align: justify; text-justify: inter-word">This was a project created on the requirment of Informational Retrieval & Social Web module by Professor <a href="https://www.wpi.edu/people/faculty/kmlee">Kyumin Lee</a> in Spring 2019 at Worcester Polytechnic Institute</p>
+									<p style="color: white ;text-align: justify; text-justify: inter-word">This is a project created on the requirment of Informational Retrieval & Social Web module by Professor <a href="https://www.wpi.edu/people/faculty/kmlee">Kyumin Lee</a> in Spring 2019 at Worcester Polytechnic Institute</p>
 									<h2 style="color: white">Why ReccomMend?</h2>
 
 									<p style="color: white; text-align: justify; text-justify: inter-word"> People often get worn out with the same mainstream/radio music
@@ -67,8 +67,27 @@
 										of three artists that the user enjoys and computes a recommendation of up to nine albums that the
 										user may also like.  The recommendation computes a KNN model using cosine similarity on the
 										dataset <a href="https://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-360K.html ">Last.FM 360K </a> and determining
-										the K nearest neighbors to a given queries.  The recommendation system then queries the Last.FM api to return the top albums of those recommended artists.  The system returns the recommendations in ranked order.
+										the K nearest neighbors to a given queries. The recommendation system then queries the Last.FM api to return the top albums of those recommended artists.  The system returns the recommendations in ranked order.
 									</p>
+
+                                    <h2 style="color: white">How Recommender Systems Works?</h2>
+
+                                    <p style="color: white; text-align: justify; text-justify: inter-word">Our main dataset for the recommendation system is from the Last.fm. Data are broken
+                                        into two parts: the activity data and the profile data. The activity data is
+                                        comprised of about 360,000 individual user's of Last.fm listening information.
+                                        It details how many times a Last.fm user played songs by various artists. The profile
+                                        data contains each user's country of residence. Since we're going to be doing item-based
+                                        collaborative filtering, lesser known artists will have views from fewer viewers, making
+                                        the pattern more noisy. This would probably result in bad recommendations. To avoid this
+                                        problem, we'll just look at the popular artists. We limited the user data to just those
+                                        from the United States for the sake of simplicity. This will reduce the number of users and
+                                        artists considerably, improving the computational efficiency significantly. As we had
+                                        used K-Nearest Neighbors, we want the data to be in an (artist, user) array, where each
+                                        row is an artist and each column is a different user. To reshape the data frame,
+                                        we pivoted the data frame to the wide format with artists as rows and users as columns.
+                                        Finally, we transform the values of the data frame into a sciPy sparse matrix for more
+                                        efficient calculations. Finally, by specifying the metric = cosine, the model will measure
+                                        similarity between artist vectors by using cosine similarity.</p>
 
 								</div>
 							</div>
